@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Raise Light Foundation - Empowering Communities and Transforming Lives">
+  <title>Raise Light Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Optional JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body class="page-home">
+  <!-- Header Section -->
+  <header class="main-header">
+    <div class="container">
+      <i><img src="Raise logo.jpg" alt="Raise_light_logo" height="100" style="border-radius: 50%;"></i> <br>
+      <h1>Raise Light Foundation</h1>
+      <nav>
+        <ul>
+          <li><a href="mission.html">Our Mission</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="impact.html">Our Impact</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="donate.html" class="donate-btn">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="slider">
+        <div class="slide" style="background-image: url('health.jpg');"></div>
+        <div class="slide" style="background-image: url('CEO\ Raise.jpg');"></div>
+        <div class="slide" style="background-image: url('joy to school.jpg');"></div>
+    </div>
+    <div class="content">
+        <h1>Welcome to Raise Light Foundation!! Making a difference in every community.</h1>
+        <h2>Empowering Communities, Transforming Lives</h2>
+        <p>Join us in making a difference by supporting education, advocacy, and community development programs.</p>
+        <a href="donate.html" class="btn-primary">Donate Now</a>
+</div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll(".hero .slider .slide");
+  const totalSlides = slides.length;
+
+  function slideBackgrounds() {
+      // Remove the 'active' class from the current slide
+      slides[currentIndex].classList.remove("active");
+
+      // Move to the next slide (loop back to the first if at the end)
+      currentIndex = (currentIndex + 1) % totalSlides;
+
+      // Add the 'active' class to the new slide
+      slides[currentIndex].classList.add("active");
+  }
+
+  // Initialize the slider
+  slides[currentIndex].classList.add("active");
+
+  // Change slides every 5 seconds
+  setInterval(slideBackgrounds, 5000);
+</script>
+
+  <!-- Mission Section -->
+  <section id="mission" class="mission">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>At Raise Light Foundation, our mission is to create opportunities for growth, education, and empowerment in under-served communities.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Raise Light Foundation. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</section>
+</html>
